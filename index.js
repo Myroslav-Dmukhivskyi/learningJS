@@ -1,14 +1,18 @@
-"use strict";
+'use strict';
 
-const arr = ['a', 'pizduk', 'c'];
-const arrObj = {
-    a: 'a',
-    1: 'b',
-    2: 'c'
+const numberOfFilms = +prompt(' Сколько фильмов вы уже посмотрели ? ', '');
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  private: false 
 };
 
-const a = 'a';
+const movieName = prompt('Один из последних просмотренных фильмов?', ''),
+ 
+ movieGrade = prompt('На сколько оцените его?', '');
 
-arrObj.a = "Artem";
-console.log(arr[1]);
-console.log(arrObj[a]);
+personalMovieDB.movies[movieName] = movieGrade;
+
